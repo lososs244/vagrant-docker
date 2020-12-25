@@ -1,0 +1,36 @@
+---
+- hosts: all
+  become: true
+  
+  tasks:
+    
+   - name: Update packages
+     apt:
+       upgrade: yes
+       update_cache: yes
+       
+   - name: Install Nginx
+     apt:
+       name: nginx
+       state: latest
+       
+   - name: Upload my content
+     copy: 
+       src: webf/
+       dest: /usr/share/nginx/html
+       notify: Restart server
+       
+   - name: Start web server
+     service:
+       name: nginx
+       state: started
+       enabled: yes 
+      
+    
+    handlers:
+      
+      - name: Restart server
+        service: nginx
+        state: restarted
+
+...
