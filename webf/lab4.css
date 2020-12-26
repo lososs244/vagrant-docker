@@ -1,0 +1,188 @@
+
+body{
+	margin : 0;
+	
+}
+
+ul{
+	list-style-type : none;
+}
+
+#global-grid-container{
+	display               : grid;
+
+	height                : 754px;
+	width                 : 100%;
+
+	
+	grid-template-columns : repeat( 4, 1fr);
+	grid-template-rows    : repeat( 4, 1fr);
+	grid-template-areas:
+	"header header header header"
+	"menu main main right1"
+	"menu main main right2"
+	"menu footer footer footer";
+}
+
+.item1{
+	display               : grid;
+
+	height                : 100%;
+	width                 : 100%;
+
+	background-color      : #63F1E5;
+
+	grid-area             : header;
+	grid-template-areas   : "whitebox headerbox";
+	grid-template-columns : 30% 70%;
+}
+
+#ul1{
+	position : relative;
+	top      : 10px;
+	left     : 45%;
+
+	overflow : auto;
+	height   : 100px;
+	width    : 40%;
+
+	text-align: center;
+	font     : bold 16px arial;
+}
+
+#form_color{
+	position : relative;
+	top      : 10px;
+	left     : 48%;
+
+	height   : 30px;
+	width    : 50%;
+}
+
+.whitebox{
+	position         : relative;
+	top              : 30%;
+	left             : 100px;
+
+	height           : 40%;
+	width            : 100%;
+
+	background-color : white;
+	text-align       : right;
+}
+
+.whitebox_text{
+	position : relative;
+	top      : 30%;
+
+	font     : bold 25px arial;
+}
+
+.headerbox, .footerbox{
+	width      : 100%;
+	text-align : right;
+}
+
+.header_text, .footer_text{
+	position : relative;
+	top: 37%;
+
+	font     : bold 40px arial;
+}
+
+.header_text{
+	position: relative;
+	top: 0;
+}
+
+.item2{
+	overflow         : auto;
+	height           : 100%;
+	width            : 100%;
+
+	background-color : #66F0B1;
+
+	grid-area        : menu;
+}
+
+#menubox{
+	position   : relative;
+	top        : 25%;
+	left       : 30%;
+
+	width      : 60%;
+
+	text-align : center;
+
+	
+}
+
+#menu{
+	font : bold 46px arial;
+}
+
+#list{
+	position : relative;
+	right    : 20px;
+}
+
+#ultext{
+	font-size : 26px;
+}
+
+.item3{
+	
+	height           : 100%;
+	width            : 100%;
+
+	background-color : white;
+	text-align       : center;
+
+	grid-area        : main;
+}
+
+#text3{
+	position : relative;
+	top      : 20%;
+
+	padding  : 10px;
+}
+
+#task5{
+	width: 40%;
+	height: 50px;
+	
+	position: relative;
+	top: 20%;
+	left: 60%;
+}
+
+.rightbox{
+	height     : 100%;
+	width      : 100%;
+
+	text-align : left;
+}
+
+#Upper{
+	background-color : #66F0B1;
+	grid-area        : right1;
+}
+
+#Lower{
+	background-color : #F3F89D;
+	grid-area        : right2;
+}
+
+.item5{
+	display               : grid;
+
+	height                : 100%;
+	width                 : 100%;
+
+	background-color      : #63F1E5;
+
+	grid-template-areas   : "whitebox footerbox";
+	grid-template-columns : 30%  70%;
+	grid-area             : footer;
+}
